@@ -1,0 +1,9 @@
+<h1>Главная страница</h1>
+<p>Добро пожаловать в СибУЦ! <%= current_user&.email %></p>
+
+<% if current_user %>
+  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Регистрация', new_user_registration_path %>
+  <%= link_to 'Войти', new_user_session_path %>
+<% end %>

@@ -1,0 +1,4 @@
+en:
+  hello: "Hello world"
+  invalid: "Invalid %{authentication_keys} or password."
+  not_found_in_database: "Invalid %{authentication_keys} or password."
