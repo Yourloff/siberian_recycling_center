@@ -1,0 +1,11 @@
+<%= form_with model: act do |form| %>
+  <%= form.hidden_field :id %>
+
+  <%= form.label :act_data %>
+  <br>
+  <%= form.text_area :act_data, rows: '10', cols: '100', name: 'json' %>
+
+  <div>
+    <%= form.submit 'Сохранить' %>
+  </div>
+<% end %>

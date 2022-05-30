@@ -1,9 +1,20 @@
-<h1>Главная страница</h1>
-<p>Добро пожаловать в СибУЦ! <%= current_user&.email %></p>
+<div class="row">
+  <div class="col-9">
+    <h1>Главная страница</h1>
+    <p>Добро пожаловать в СибУЦ! <%= current_user&.email %></p>
+    <% if current_user %>
+      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+      <%= link_to 'Акты', acts_path %>
+    <% else %>
+      <%= link_to 'Регистрация', new_user_registration_path %>
+      <%= link_to 'Войти', new_user_session_path %>
+    <% end %>
+  </div>
+  <% if current_user&.admin %>
+    <div class="col-3">
+      <h2>Админ-панель</h2>
+      <%= link_to 'Пользователи', users_path %>
+    </div>
+  <% end %>
+</div>
 
-<% if current_user %>
-  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Регистрация', new_user_registration_path %>
-  <%= link_to 'Войти', new_user_session_path %>
-<% end %>

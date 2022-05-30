@@ -1,0 +1,8 @@
+<%= render @act %>
+
+<div>
+  <%= link_to "Редактировать текущий акт", edit_act_path(@act) %> |
+  <%= link_to "Все акты", acts_path %>
+
+  <%= button_to "Удалить", @act, method: :delete %>
+</div>
