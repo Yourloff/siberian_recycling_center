@@ -1,24 +1,13 @@
-# README
+# Сибирский утилизационный центр
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Для запуска приложения:
 
-Things you may want to cover:
+Установить необходимые гемы
+```
+bundle
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Старт
+```
+bundle exec rails s
+```
